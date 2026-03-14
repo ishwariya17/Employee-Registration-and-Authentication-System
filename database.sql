@@ -7,7 +7,7 @@ CREATE TABLE users (
 id INT AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(100) NOT NULL,
 email VARCHAR(100) NOT NULL UNIQUE,
-password VARCHAR(100) NOT NULL
+password VARCHAR(255) NOT NULL  /* plain or SHA-256 hash (64 hex chars) */
 );
 -- Employees Table
 CREATE TABLE employees (
@@ -25,4 +25,4 @@ INSERT INTO employees (emp_id, name, department, email, salary)
 VALUES
 (101, 'John Doe', 'IT', 'john@email.com', 50000),
 (102, 'Jane Smith', 'HR', 'jane@email.com', 45000),
-(103, 'Robert Brown', 'Finance', 'robert@email.com', 6000
+(103, 'Robert Brown', 'Finance', 'robert@email.com', 60000);
